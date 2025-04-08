@@ -142,7 +142,7 @@ def main():
     #init_serial()
     print_sorting_options()
     choice = input("Enter the number of the sorting method: ").strip()
-    choice2 = input("Track inventory? (Y/N): ").strip() if choice in ["3", "6"] else "N"
+    choice2 = input("Track inventory (Option unfinished)? (Y/N): ").strip() if choice in ["3", "6"] else "N"
     current_sorting_mode = SORTING_MODES.get(choice, "color")
     threshold = input("Enter a price threshold: ").strip() if current_sorting_mode == "buy" else 1000000
     
