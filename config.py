@@ -33,7 +33,7 @@ START_MARKER = 60
 END_MARKER = 62
 
 # Name Detection
-MAX_ATTEMPTS_NAME = 30
+MAX_ATTEMPTS_NAME = 5
 TIMEOUT_NAME = 10  # seconds
 
 # Model
