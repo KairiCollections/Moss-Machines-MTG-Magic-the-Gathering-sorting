@@ -10,6 +10,9 @@ Note: This script works pretty well now, but it can still make mistakes. I will 
 By default connection to Ardiuno is off and so is send_to_Ardiuno, uncomment to enable
 
 Support - Help keep my motivation and my wife less annoyed with it's existence
+
 Patreon - https://www.patreon.com/KairiCollections
+
 By me a coffee - https://www.buymeacoffee.com/KairiCollections
+
 Ko-fi - http://ko-fi.com/kairiskyewillow
