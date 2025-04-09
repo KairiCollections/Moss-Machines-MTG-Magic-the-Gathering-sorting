@@ -5,7 +5,7 @@ You will also need the default-cards json file from scryfall.com
 
 Note: This script works pretty well now, but it can still make mistakes. I will continue to make the code as accurate as I can and upload major breakthroughs. If you wish to contribute to the identification script I am open to contributors
 
-By default connection to Ardiuno is off and so is send_to_Ardiuno, uncomment to enable
+By default connection to Ardiuno is off and so is send_to_Arduino, uncomment to enable
 
 	3D Construction - https://www.tinkercad.com/things/8l4ww8YQsPP-construction?sharecode=WEaZcndq0rZ0zSs5aMsZIZqRYVMQgGnU2T5gb_6l3to
 	3D Print files - https://www.tinkercad.com/things/8H79OmknuDc-all-sorting-machine-blocks?sharecode=gUBeHjsUa5k9O5WAyYCGVbsvjMlA86fZP6nKU6qNViU
