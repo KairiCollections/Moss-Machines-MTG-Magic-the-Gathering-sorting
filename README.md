@@ -7,8 +7,8 @@ Note: This script works pretty well now, but it can still make mistakes. I will 
 
 By default connection to Ardiuno is off and so is send_to_Arduino, uncomment to enable
 
-	3D Construction - https://www.tinkercad.com/things/8l4ww8YQsPP-construction?sharecode=WEaZcndq0rZ0zSs5aMsZIZqRYVMQgGnU2T5gb_6l3to
-	3D Print files - https://www.tinkercad.com/things/8H79OmknuDc-all-sorting-machine-blocks?sharecode=gUBeHjsUa5k9O5WAyYCGVbsvjMlA86fZP6nKU6qNViU
+	2525 visual Construction - https://www.tinkercad.com/things/8l4ww8YQsPP-construction?sharecode=WEaZcndq0rZ0zSs5aMsZIZqRYVMQgGnU2T5gb_6l3to
+ 	2020 visual Construction - https://www.tinkercad.com/things/8bGtRvJtKur-2020-frame-construction?sharecode=nWDpbURGcTfkUClNbCVUkfDFAVokZKfBA2PQR0cKCig
 
 Support - Help keep my motivation and my wife less annoyed with the machine's existence
 
