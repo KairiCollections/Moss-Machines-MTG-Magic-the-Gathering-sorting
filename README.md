@@ -20,3 +20,7 @@ Support - Help keep my motivation and my wife less annoyed with the machine's ex
 Other non-related support:
 
 	https://www.etsy.com/shop/KairiCollections
+
+Join Discord / Reddit:
+  https://discord.gg/5C8BDKQMxk
+  https://www.reddit.com/r/MossMachine/s/nfsFDerESS
