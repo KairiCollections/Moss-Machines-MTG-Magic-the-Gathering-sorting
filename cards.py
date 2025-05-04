@@ -1,13 +1,44 @@
-import json
 import os
-from config import CARDS_JSON_PATH, EXCLUDED_SETS
+import json
+import glob
+
+from config import EXCLUDED_SETS
 
 CARDS_DATA = []
 CARD_DATA_BY_ID = {}
-if os.path.exists(CARDS_JSON_PATH):
-    with open(CARDS_JSON_PATH, 'r', encoding='utf-8') as f:
-        CARDS_DATA = json.load(f)
-        CARD_DATA_BY_ID = {c['id']: c for c in CARDS_DATA} # Directly create the dictionary
+
+# Construct the wildcard pattern in the current directory
+default_files_pattern = 'default*.json'
+
+# Find all files matching the pattern in the current directory
+default_files = glob.glob(default_files_pattern)
+
+# Sort files by modification time (newest first)
+default_files.sort(key=os.path.getmtime, reverse=True)
+
+# Check if any files were found
+if default_files:
+    # Get the path of the newest file
+    newest_file_path = default_files[0]
+
+    if os.path.exists(newest_file_path):
+        try:
+            with open(newest_file_path, 'r', encoding='utf-8') as f:
+                file_data = json.load(f)
+                CARDS_DATA.extend(file_data)
+        except json.JSONDecodeError as e:
+            print(f"Error decoding JSON from {newest_file_path}: {e}")
+        except Exception as e:
+            print(f"An error occurred while reading {newest_file_path}: {e}")
+    else:
+        print(f"Error: The newest file path '{newest_file_path}' does not exist.")
+else:
+    print(f"No files matching the pattern '{default_files_pattern}' found.")
+
+
+CARD_DATA_BY_ID = {c['id']: c for c in CARDS_DATA}
+total_entries_loaded = len(CARDS_DATA)
+print(f"Successfully loaded {total_entries_loaded} card entries from the newest default*.json file ({newest_file_path}).")
 
 def extract_card_info(card_id):
     card = CARD_DATA_BY_ID.get(card_id)

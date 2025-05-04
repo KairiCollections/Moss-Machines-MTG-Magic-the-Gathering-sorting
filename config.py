@@ -8,7 +8,6 @@ HEIGHT = 1043            # Height of the perspective-corrected card image
 MAX_DISTANCE_THRESHOLD = 100  # Hashing match threshold
 
 # Data Paths (Consider making these relative to the script's location)
-CARDS_JSON_PATH = "default-cards-20241206100658.json"
 HASH_DB_PATH = "card_hashes.json"  # If you are using one
 IMAGES_DIR = "downloaded_cards"      # If you are using one
 LAYOUT_SIGNATURES_JSON = "layout_signatures.json" # If you are using one
