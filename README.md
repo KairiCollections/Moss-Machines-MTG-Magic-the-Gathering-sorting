@@ -24,4 +24,5 @@ Join our community!:
 - Reddit - https://www.reddit.com/r/MossMachine/s/nfsFDerESS
 
 Disclaimer:
+- Given that it is open source the code is likely to change a lot over time. All code is toughly tested but may need calibrated depending on your assembly. In the event of an unlikely error I hold no responsibly to damages. Test on non-valuable cards before going full production and as with ALL sorting machines NEVER put a super valuable card in one.
 - Moss machine is open source in all aspects but if you create your own variation of code or 3d print files you must credit the original source. Attribution-NonCommercial_ShareAlike 4.0 (CC-BY-NC-SA 4.0)
