@@ -139,7 +139,8 @@ def detect_card_name(frame, card_approx):
         return name
 
 def main():
-    #init_serial()
+    # Initialize serial, sorting options, etc.
+    # init_serial()
     print_sorting_options()
     choice = input("Enter the number of the sorting method: ").strip()
     choice2 = input("Track inventory (Option unfinished)? (Y/N): ").strip() if choice in ["3", "6"] else "N"
@@ -160,46 +161,44 @@ def main():
         if not ret:
             logger.error("Failed to grab frame.")
             break
-        
-        read_time = time.time()
-        frame = cv2.rotate(frame, cv2.ROTATE_90_CLOCKWISE)
-        display_frame = frame.copy()
-        cv2.imshow("Detected Card", display_frame)
-        display_time = time.time()
-        
+
+        # Show the original camera feed in a window
+        cv2.imshow("Camera Feed", frame)
+
+        # Find card contour in the current frame
         card_approx = find_card_contour(frame)
-        contour_time = time.time()
-        
-        logger.debug(f"Frame processing - Read: {read_time-frame_start:.3f}s, "
-                   f"Rotate/Display: {display_time-read_time:.3f}s, "
-                   f"Contour: {contour_time-display_time:.3f}s")
+
+        # Always display the current frame with overlays
+        display_frame = frame.copy()
 
         if card_approx is not None:
-            name_start = time.time()
+            # Detect card name in the current frame
             name = detect_card_name(frame, card_approx)
-            name_time = time.time()
-            
+
             if name is None:
                 handle_unrecognized_card(display_frame, card_approx, reason="Name not found")
             else:
-                process_start = time.time()
+                # Process the card approximation for recognition
                 chosen_id, chosen_info = process_card_approx(frame, card_approx, current_sorting_mode, threshold, choice2)
-                process_time = time.time()
-                
                 if chosen_info:
                     handle_recognized_card(display_frame, chosen_info, current_sorting_mode, threshold, choice2, name)
                 else:
                     handle_unrecognized_card(display_frame, card_approx, reason="Card data not found")
-                
-                logger.info(f"Main processing - Name: {name_time-name_start:.3f}s, "
-                          f"Card: {process_time-process_start:.3f}s")
-        
+            
+            # Show the detection result with overlays
+            cv2.imshow("Detected Card", display_frame)
+        else:
+            # If no card found, just show the original frame
+            cv2.imshow("Detected Card", display_frame)
+
+        # Frame timing and stats
         frame_count += 1
         total_processing_time += time.time() - frame_start
         avg_time = total_processing_time / frame_count if frame_count > 0 else 0
         logger.info(f"Frame {frame_count} processed in {time.time() - frame_start:.3f}s | "
-                   f"Avg frame time: {avg_time:.3f}s")
-        
+                    f"Avg frame time: {avg_time:.3f}s")
+
+        # Exit condition
         if cv2.waitKey(1) & 0xFF == ord('q'):
             break
 
