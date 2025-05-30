@@ -86,10 +86,6 @@ The Moss Machine combines computer vision, machine learning, and hardware integr
 
 ---
 
-## Hardware & Recognition
-
----
-
 ## Legal & Usage Notice
 
 **Disclaimer:**  
