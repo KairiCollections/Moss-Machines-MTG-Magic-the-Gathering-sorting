@@ -50,7 +50,7 @@ The Moss Machine combines computer vision, machine learning, and hardware integr
 ---
 
 ## Pictures
-<img src="resourses/1.jpg" width="500" /><img src="resourses/2.jpg" width="500" /><img src="resourses/3.jpg" width="500" /><img src="resourses/4.jpg" width="500" /><img src="resourses/5.jpg" width="500" /><img src="resourses/6.jpg" width="500" /><img src="resourses/7.jpg" width="500" /><img src="resourses/8.jpg" width="500" /><img src="resourses/9.jpg" width="500" /><img src="resourses/10.jpg" width="500" />
+<img src="resourses/1.jpg" width="400" /><img src="resourses/2.jpg" width="400" /><img src="resourses/3.jpg" width="400" /><img src="resourses/4.jpg" width="400" /><img src="resourses/5.jpg" width="400" /><img src="resourses/6.jpg" width="400" /><img src="resourses/7.jpg" width="400" /><img src="resourses/8.jpg" width="400" /><img src="resourses/9.jpg" width="400" /><img src="resourses/10.jpg" width="400" />
 
 ---
 
@@ -60,21 +60,6 @@ The Moss Machine combines computer vision, machine learning, and hardware integr
 - All code is thoroughly tested but may require calibration based on your hardware setup.  
 - Use caution—never put valuable cards in the machine without testing.  
 - If you modify or create your own variations, please credit the original source.
-
----
-
-## Community & Support
-
-### Join the Conversation
-- **Discord:** [https://discord.gg/2gNWpV6UjW](https://discord.gg/2gNWpV6UjW)  
-  The most active place for community support, collaborations, and real-time chat.
-
-- **Reddit:** [r/MossMachine](https://www.reddit.com/r/MossMachine/)  
-  Share your builds, ask questions, and stay updated.
-
-- **GitHub Repository:**  
-  [https://github.com/KairiCollections/Moss-Machine---Magic-the-Gathering-recognition-and-sorting-machine](https://github.com/KairiCollections/Moss-Machine---Magic-the-Gathering-recognition-and-sorting-machine)  
-  Access the full code, contribute, or report issues.
 
 ---
 
