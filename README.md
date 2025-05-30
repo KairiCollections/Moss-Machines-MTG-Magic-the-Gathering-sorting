@@ -1,28 +1,122 @@
-This script connects to your camera, finds a card shape, hashes it and attempts to identify the card.
-As an additional effort it will also try to read the card name and compare it to similarities within the perceptual hash identification. Edit the config for for your particular need, you may have to edit some other variables in other scripts for your needs. Once it identifies the card all it does is send the variable requested to Arduino via a serial connection but could be easily adapted to whatever machine you may be using over USB or piping it to some other script
+# Moss Machine - Open Source Magic: The Gathering Sorting & Recognition
 
-You will also need the default-cards json file from scryfall.com
+![Moss Machine Logo](resourses/Icon.png)
 
-Note: This script works pretty well now, but it can still make mistakes. I will continue to make the code as accurate as I can and upload major breakthroughs. If you wish to contribute to the identification script I am open to contributors
+Welcome to the Moss Machine project! This open-source initiative provides a comprehensive system for automating the sorting, recognition, and management of Magic: The Gathering (MTG) cards, with potential expansion to other Trading Card Games (TCGs).
 
-By default connection to Ardiuno is off and so is send_to_Arduino, uncomment to enable
+---
 
-- 2525 visual Construction - https://www.tinkercad.com/things/8l4ww8YQsPP-construction?sharecode=WEaZcndq0rZ0zSs5aMsZIZqRYVMQgGnU2T5gb_6l3to
-- 2020 visual Construction - https://www.tinkercad.com/things/8bGtRvJtKur-2020-frame-construction?sharecode=nWDpbURGcTfkUClNbCVUkfDFAVokZKfBA2PQR0cKCig
-- Electrical - Visual overview - https://app.cirkitdesigner.com/project/1c5c576c-89bb-4bd1-bc03-c3053293fa9c
+### Overview
 
-Support - Help keep my motivation and my wife less annoyed with the machine's existence
-- Patreon - https://www.patreon.com/KairiCollections
-- By me a coffee - https://www.buymeacoffee.com/KairiCollections
-- Ko-fi - http://ko-fi.com/kairiskyewillow
+The Moss Machine combines computer vision, machine learning, and hardware integration to create a reliable, customizable card sorting solution. Whether you're a collector, player, or developer, this project offers tools and guidance to build your own automated card sorting system.
 
-Other non-related support:
-- https://www.etsy.com/shop/KairiCollections
+---
 
-Join our community!:
-- Discord - https://discord.gg/5C8BDKQMxk
-- Reddit - https://www.reddit.com/r/MossMachine/s/nfsFDerESS
+## Features
 
-Disclaimer:
-- Given that it is open source the code is likely to change a lot over time. All code is thoroughly tested but may need calibrated depending on your assembly. In the event of an unlikely error I hold no responsibly to damages. Test on non-valuable cards before going full production and as with ALL sorting machines NEVER put a super valuable card in one.
-- Moss machine is open source in all aspects but if you create your own variation of code or 3d print files you must credit the original source. Attribution-NonCommercial_ShareAlike 4.0 International (CC-BY-NC-SA 4.0)
+- **Open Source & Community Driven**  
+  Fully open source code with transparent development. Contributions and modifications are encouraged—please credit the original source when creating derivatives.
+
+- **Versatile Recognition Methods**  
+  - Uses OpenCV for precise card detection and perspective correction at any angle.  
+  - Employs advanced contour detection for accurate boundaries even in imperfect lighting conditions.  
+  - Implements image hashing techniques for quick identification against a database of known card images, including color channel separation (RGB) for improved accuracy.  
+  - Integrates Tesseract OCR for secondary verification through text recognition (e.g., card names).
+
+- **Sorting & Organization**  
+  - Multiple sorting modes based on card attributes such as color, mana value (CMC), type, set, and market value brackets.  
+  - Supports flexible system configurations, including set grouping and custom filters.  
+  - Special "buy mode" for evaluating purchase decisions based on price thresholds, helping collectors maintain budgets.
+
+- **Hardware Integration**  
+  Designed to interface with physical sorting hardware via serial communication, configurable for different bin layouts and rejection mechanisms.
+
+- **Performance & Logging**  
+  - Detailed timing logs for each processing stage.  
+  - Robust multiple attempt strategies for reliable name detection and image matching.  
+  - Excludes digital-only and promotional sets for focused collection management.
+
+- **Configurable & Extensible**  
+  - Centralized configuration files for all settings.  
+  - Adjustable thresholds for matching accuracy.  
+  - Easy modification of sorting logic and set filters.
+
+- **Technology Stack**  
+  - Python: OpenCV, Tesseract OCR, ImageHash, PySerial, YOLO (Ultralytics), Pillow, NumPy, JSON, Scikit-Image  
+  - C++: Arduino control and decision-making  
+
+---
+
+## Pictures
+<img src="resourses/1.jpg" width="500" /><img src="resourses/2.jpg" width="500" /><img src="resourses/3.jpg" width="500" /><img src="resourses/4.jpg" width="500" /><img src="resourses/5.jpg" width="500" /><img src="resourses/6.jpg" width="500" /><img src="resourses/7.jpg" width="500" /><img src="resourses/8.jpg" width="500" /><img src="resourses/9.jpg" width="500" /><img src="resourses/10.jpg" width="500" />
+
+---
+
+### Disclaimer
+
+- The project is open source and may evolve significantly over time.  
+- All code is thoroughly tested but may require calibration based on your hardware setup.  
+- Use caution—never put valuable cards in the machine without testing.  
+- If you modify or create your own variations, please credit the original source.
+
+---
+
+## Community & Support
+
+### Join the Conversation
+- **Discord:** [https://discord.gg/2gNWpV6UjW](https://discord.gg/2gNWpV6UjW)  
+  The most active place for community support, collaborations, and real-time chat.
+
+- **Reddit:** [r/MossMachine](https://www.reddit.com/r/MossMachine/)  
+  Share your builds, ask questions, and stay updated.
+
+- **GitHub Repository:**  
+  [https://github.com/KairiCollections/Moss-Machine---Magic-the-Gathering-recognition-and-sorting-machine](https://github.com/KairiCollections/Moss-Machine---Magic-the-Gathering-recognition-and-sorting-machine)  
+  Access the full code, contribute, or report issues.
+
+---
+
+## Build Your Own
+
+### Get Started
+- All necessary files, including code, 3D print files, and hardware schematics, are available in this repository.
+- Follow the detailed instructions in the `README` to assemble your own automated MTG sorting machine.
+
+---
+
+## Hardware & Recognition
+
+---
+
+## Legal & Usage Notice
+
+**Disclaimer:**  
+This system is intended for hobbyist and educational use. Always test with non-valuable cards first. Handle valuable or rare cards with care—never trust automated sorting in critical scenarios. The project is open source; use at your own risk.
+
+---
+
+## Connect with Us & Follow
+
+### ![Discord Logo](resourses/Discord.png)
+**Join our Discord:**  
+[https://discord.gg/2gNWpV6UjW](https://discord.gg/2gNWpV6UjW)
+
+### ![Reddit Logo](resourses/Reddit.png)
+**Reddit:**  
+[r/MossMachine](https://www.reddit.com/r/MossMachine/)
+
+### ![GitHub Logo](resourses/Github.png)
+**Repository:**  
+[https://github.com/KairiCollections/Moss-Machine---Magic-the-Gathering-recognition-and-sorting-machine](https://github.com/KairiCollections/Moss-Machine---Magic-the-Gathering-recognition-and-sorting-machine)
+
+---
+
+## Acknowledgments & License
+
+This project is licensed under the **Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0)**.  
+Please give credit to the original authors when creating derivatives.
+
+---
+
+**Happy Sorting & Recognizing!**  
+*Build smarter, organize better, and enjoy your collection to the fullest!*
