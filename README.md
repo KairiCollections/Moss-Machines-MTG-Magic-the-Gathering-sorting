@@ -1,4 +1,4 @@
-# Moss Machine - Open Source Magic: The Gathering - MTG- Sorting & Recognition
+# Moss Machine - Open Source Magic: The Gathering - MTG - Sorting & Recognition
 
 <p align="center">
   <img src="resourses/Icon.png" width="500" />
