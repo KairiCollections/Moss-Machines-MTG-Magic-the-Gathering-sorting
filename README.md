@@ -86,6 +86,17 @@ This system is intended for hobbyist and educational use. Always test with non-v
 
 ---
 
+## Support
+Help keep my motivation and my wife less annoyed with the machine's existence
+- Patreon - https://www.patreon.com/KairiCollections
+- By me a coffee - https://www.buymeacoffee.com/KairiCollections
+- Ko-fi - http://ko-fi.com/kairiskyewillow
+
+Other non-related support:
+- https://www.etsy.com/shop/KairiCollections
+
+---
+
 ## Acknowledgments & License
 
 This project is licensed under the **Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0)**.  
