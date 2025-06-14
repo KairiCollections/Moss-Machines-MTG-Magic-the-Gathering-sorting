@@ -6,7 +6,7 @@
 //Pin Definitions for hardware control
 enum Pins { 
     Zmin = 18, Xmin = 3, Ymin = 14, Xmax = 2, Ymax = 15, Zmax = 19, //Endstops
-    Vacuum1 = 9, Vacuum2 = 10, //Vacuums: Pickup/Release respectively
+    Lights = 8, Vacuum1 = 9, Vacuum2 = 10, //Vacuums: Pickup/Release respectively
     Xenable = 38, Yenable = 56, Zenable = 62, E0enable = 24, E1enable = 30, //Motors
     Xstep = 54, Ystep = 60, Zstep = 46, E0step = 26, E1step = 36, //Stepper Controls
     Xdir = 55, Ydir = 61, Zdir = 48, E0dir = 28, E1dir = 34 //Directions
@@ -56,6 +56,7 @@ void setup() {
   for (byte pin : lowPins) { digitalWrite(pin, LOW); }    //Disable motors initially
 
   Serial.begin(9600);                        //Begin serial connection
+  digitalWrite(8, HIGH);                     //Turn on lights
   digitalWrite(13, HIGH);                    //Turn on the onboard LED for debugging
   while (!Serial) { delay(10); }             //Wait for serial to be ready
   Serial.println("Adafruit VL6180x test!");  //Print sensor initialization message
