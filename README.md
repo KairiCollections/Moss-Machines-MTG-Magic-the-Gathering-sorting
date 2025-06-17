@@ -67,7 +67,7 @@ The Moss Machine combines computer vision, machine learning, and hardware integr
 
 ### Get Started
 - All necessary files, including code, 3D print files, and hardware schematics, are available in this repository.
-- Follow the detailed instructions in the `README` to assemble your own automated MTG sorting machine.
+- Follow the detailed instructions within the Discord under #assembly
 
 ---
 
