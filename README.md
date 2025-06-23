@@ -1,7 +1,7 @@
 # Moss Machine - Open Source Magic: The Gathering - MTG - Sorting & Recognition
 
 <p align="center">
-  <img src="resourses/Icon.png" width="500" />
+  <img src="resources/Icon.png" width="500" />
 </p>
 
 Welcome to the Moss Machine project! This open-source initiative provides a comprehensive system for automating the sorting, recognition, and management of Magic: The Gathering (MTG) cards, with potential expansion to other Trading Card Games (TCGs).
@@ -50,7 +50,7 @@ The Moss Machine combines computer vision, machine learning, and hardware integr
 ---
 
 ## Pictures
-<img src="resourses/1.jpg" width="400" /><img src="resourses/2.jpg" width="400" /><img src="resourses/3.jpg" width="400" /><img src="resourses/4.jpg" width="400" /><img src="resourses/5.jpg" width="400" /><img src="resourses/6.jpg" width="400" /><img src="resourses/7.jpg" width="400" /><img src="resourses/8.jpg" width="400" /><img src="resourses/9.jpg" width="400" /><img src="resourses/10.jpg" width="400" />
+<img src="resources/1.jpg" width="400" /><img src="resources/2.jpg" width="400" /><img src="resources/3.jpg" width="400" /><img src="resources/4.jpg" width="400" /><img src="resources/5.jpg" width="400" /><img src="resources/6.jpg" width="400" /><img src="resources/7.jpg" width="400" /><img src="resources/8.jpg" width="400" /><img src="resources/9.jpg" width="400" /><img src="resources/10.jpg" width="400" />
 
 ---
 
@@ -80,7 +80,7 @@ This system is intended for hobbyist and educational use. Always test with non-v
 
 ## Connect with Us & Follow
 
-| ![Discord Logo](resourses/Discord.png) | ![Reddit Logo](resourses/Reddit.png) | ![GitHub Logo](resourses/Github.png) |
+| ![Discord Logo](resources/Discord.png) | ![Reddit Logo](resources/Reddit.png) | ![GitHub Logo](resources/Github.png) |
 |:----------------------------------------:|:----------------------------------:|:----------------------------------:|
 | **Join our Discord:**<br>[https://discord.gg/2gNWpV6UjW](https://discord.gg/2gNWpV6UjW) | **Reddit:**<br>[r/MossMachine](https://www.reddit.com/r/MossMachine/) | **Repository:**<br>[GitHub](https://github.com/KairiCollections/Moss-Machine---Magic-the-Gathering-recognition-and-sorting-machine) |
 
