@@ -50,7 +50,7 @@ const short pickup_threshold = 40, release_threshold = 40;                 //Thr
 const short HCC = 10, YCourseCorrection = 1, XCourseCorrection = 0;        //Cycles until rehome and course correction variables
 
 void setup() {
-  byte pins[] = { Xstep, Ystep, Zstep, E0step, E1step, Xdir, Ydir, Zdir, E0dir, E1dir, Xenable, Yenable, Zenable, E0enable, E1enable, Vacuum1, Vacuum2};
+  byte pins[] = { Xstep, Ystep, Zstep, E0step, E1step, Xdir, Ydir, Zdir, E0dir, E1dir, Xenable, Yenable, Zenable, E0enable, E1enable, Vacuum1, Vacuum2, Lights};
   for (byte pin : pins) { pinMode(pin, OUTPUT); }  //Set all pins as outputs
   byte lowPins[] = { Xenable, Yenable, Zenable, E0enable, E1enable, Vacuum1, Vacuum2};
   for (byte pin : lowPins) { digitalWrite(pin, LOW); }    //Disable motors initially
