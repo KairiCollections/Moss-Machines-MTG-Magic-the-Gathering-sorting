@@ -143,10 +143,10 @@ void parseData() {
 void pick(short steps, byte Release) {PickupRetry = 0;
 retrypickup:
   Move1(0, steps, zspeed);  //Move to pickup position
-  if (Release == 1) {MotorsOnOff(1);delay(100);digitalWrite(Vacuum2,0);delay(300);digitalWrite(Vacuum2,1);ReadRange(3);  //Turn motors off and release card
-    while ((range[2] + range[3]) / 2 < release_threshold) {digitalWrite(Vacuum2,0);delay(300);digitalWrite(Vacuum2,1);ReadRange(3);}//Check range and if card didn't drop retry
+  if (Release == 1) {MotorsOnOff(1);delay(100);digitalWrite(Vacuum2,1);delay(300);digitalWrite(Vacuum2,0);ReadRange(3);  //Turn motors off and release card
+    while ((range[2] + range[3]) / 2 < release_threshold) {digitalWrite(Vacuum2,1);delay(300);digitalWrite(Vacuum2,0);ReadRange(3);}//Check range and if card didn't drop retry
     MotorsOnOff(0);delay(100);Move1(1, steps, zespeed);} //Turn motors back on and move back up
-  if (Release == 0) {digitalWrite(Vacuum1, 0);delay(500);digitalWrite(Vacuum1, 1);Move1(1, steps, zespeed);}ReadRange(3);//Vacuum to pick up card
+  if (Release == 0) {digitalWrite(Vacuum1, 1);delay(500);digitalWrite(Vacuum1, 0);Move1(1, steps, zespeed);}ReadRange(3);//Vacuum to pick up card
     if (((range[2] + range[3]) / 2) > pickup_threshold) {PickupRetry++;if (PickupRetry >= 10) {StopMachine();} else {goto retrypickup;}}//If 10 retrys failed stop the machine
 }  
 
@@ -181,6 +181,8 @@ void DetermineAction() { //Figure out what to do
   } else if (Tempval1 == "CalibrateX2") {Move4(1,1,5,0);
   } else if (Tempval1 == "CalibrateY1") {Move4(0,0,0,5);
   } else if (Tempval1 == "CalibrateY2") {Move4(0,1,0,5);
+  } else if (Tempval1 == "HomeButton") {Homemachine);
+  
   } else if (match = 1){match = 0;}else{ForLoop(1, 34);} // Handle everything else
 }
 
